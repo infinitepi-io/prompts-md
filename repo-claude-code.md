@@ -23,6 +23,11 @@
 - Use "I don't see" or "I cannot find" rather than making assumptions
 - Provide concrete evidence for all claims about the codebase
 
+## Infrastructure Tools
+
+- **OpenTofu Version**: 1.9.0 (using `tofu` command, not `terraform`)
+- **AWS Provider**: hashicorp/aws version ~> 5.0.0
+
 ## Focus Areas
 
 When you want Claude to focus on specific parts of the codebase, add instructions here:
