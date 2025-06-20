@@ -22,7 +22,6 @@ install_claude() {
     info() { echo >&2 -e "${cyan}[i] $*${reset}"; }
     pass() { echo >&2 -e "${green}[O] $*${reset}"; }
     fail() { echo >&2 -e "${red}[X] $*${reset}"; return 1; }
-
     if command -v pnpm &> /dev/null; then
         info "Installing Claude Code with pnpm..."
         pnpm install -g @anthropic-ai/claude-code
@@ -32,7 +31,6 @@ install_claude() {
     else
         fail "Neither npm nor pnpm is installed"
     fi
-
     if command -v pnpm >/dev/null 2>&1; then
         info "Installing MCP server with pnpm..."
         claude mcp add opentofu -- pnpm dlx @opentofu/opentofu-mcp-server
