@@ -1,0 +1,1 @@
+- Use @mcp-name to connect with mcp.
