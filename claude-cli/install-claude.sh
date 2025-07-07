@@ -48,6 +48,15 @@ install_claude() {
             --env FASTMCP_LOG_LEVEL=ERROR \
             --env AWS_DOCUMENTATION_PARTITION=aws \
             mcp/aws-documentation:latest
+        info "Setting up Bookmark Manager MCP server..."
+        info "Pulling Bookmark Manager MCP image..."
+        docker pull mindriftfall2infinitepiio/bookmark-manager-mcp:v1.0.0
+        claude mcp add bookmark-manager -- docker run \
+            --rm \
+            --interactive \
+            --volume ~/.data:/app/.data \
+            mindriftfall2infinitepiio/bookmark-manager-mcp:v1.0.0
+        pass "All the Docker based MCP Server setup is completed successfully."
     else
         info "Docker not found, skipping AWS documentation MCP setup"
     fi
