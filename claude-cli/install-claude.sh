@@ -42,6 +42,14 @@ install_claude() {
         info "Setting up AWS documentation MCP with Docker..."
         info "Pulling AWS documentation MCP image..."
         docker pull mcp/aws-documentation:latest
+        if command -v aws &> /dev/null; then
+        info "Syncing bookmarks to S3 bucket..."
+        . assume 'infinitepi-io/infra-mgnt/AWSAdministratorAccess' || fail "Failed to assume role for S3 access."
+        aws s3 cp s3://bookmark-mcp-aps1-spx5d/bookmarks.json ~/.data/bookmarks.json --source-region ap-south-1 && pass "Bookmarks synced successfully." || fail "Failed to sync bookmarks."
+        . assume --unset
+        else
+            fail "AWS CLI not found, cannot sync bookmarks."
+        fi
         claude mcp add aws-docs -- docker run \
             --rm \
             --interactive \
