@@ -9,10 +9,13 @@
         },
         "sonar-pro": {
           "name": "sonar-pro"
+        },
+        "sonar-reasoning": {
+          "name": "sonar-reasoning"
         }
       },
       "options": {
-        "baseURL": "https://api.perplexity.ai"
+        "baseURL": "https://api.perplexity.ai/api"
       }
     }
   },

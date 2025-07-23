@@ -63,7 +63,7 @@ install_claude() {
             --rm \
             --interactive \
             --volume ~/.data:/app/.data \
-            mindriftfall2infinitepiio/bookmark-manager-mcp:v1.0.0
+            mindriftfall2infinitepiio/bookmark-manager-mcp:latest
         pass "All the Docker based MCP Server setup is completed successfully."
     else
         info "Docker not found, skipping AWS documentation MCP setup"
