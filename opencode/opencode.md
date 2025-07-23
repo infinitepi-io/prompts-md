@@ -26,18 +26,5 @@ After successful authentication, you'll be able to use GitHub Copilot models thr
 To verify your authentication status:
 
 ```bash
-opencode auth status
-```
-
-## Available Copilot Models
-
-Once authenticated, you can use these Copilot models:
-
-- `copilot` - Standard GitHub Copilot model
-- `copilot-chat` - GitHub Copilot Chat model
-
-## Usage Example
-
-```bash
-opencode --model copilot "Explain this function"
+opencode auth list
 ```
