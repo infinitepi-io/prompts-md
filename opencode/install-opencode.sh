@@ -110,7 +110,7 @@ EOF
             # Use jq for JSON manipulation if available
             jq '.mcp["bookmark-manager"] = {
                 "type": "local",
-                "command": ["docker", "run", "--rm", "--interactive", "--volume", "'$HOME'/.data:/app/.data", "mindriftfall2infinitepiio/bookmark-manager-mcp:v1.0.0"],
+                "command": ["docker", "run", "--rm", "--interactive", "--volume", "'$HOME'/.data:/app/.data", "mindriftfall2infinitepiio/bookmark-manager-mcp:latest"],
                 "enabled": true
             }' "$CONFIG_FILE" > "${CONFIG_FILE}.tmp" && mv "${CONFIG_FILE}.tmp" "$CONFIG_FILE"
         else
