@@ -1,4 +1,4 @@
-install_claude() {
+install_sbc() {
     set -o nounset
     set -o pipefail
     IFS=$'\n\t'
@@ -58,7 +58,7 @@ install_claude() {
             mcp/aws-documentation:latest
         info "Setting up Bookmark Manager MCP server..."
         info "Pulling Bookmark Manager MCP image..."
-        docker pull mindriftfall2infinitepiio/bookmark-manager-mcp:v1.0.0
+        docker pull mindriftfall2infinitepiio/bookmark-manager-mcp:latest
         claude mcp add bookmark-manager -- docker run \
             --rm \
             --interactive \
