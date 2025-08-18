@@ -8,3 +8,4 @@
 - https://docs.cline.bot/prompting/cline-memory-bank
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching
 - https://github.com/citypaul/.dotfiles/blob/main/claude/.claude/CLAUDE.md
+- https://www.promptcowboy.ai
