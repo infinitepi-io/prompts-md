@@ -1,0 +1,38 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "mode": {
+    "build": {
+      "prompt": "{file:~/.source/system-prompts/core-principal.md}",
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": false
+      }
+    },
+    "plan": {
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      }
+    }
+  },
+  "mcp": {
+    "mcp-whois": {
+      "type": "local",
+      "command": ["npx", "-y", "@glg/mcp-whois"],
+      "enabled": false
+    },
+    "mcp-gds": {
+      "type": "local",
+      "command": ["npx", "-y", "@glg/mcp-gds"],
+      "enabled": false
+    },
+    "mcp-ticketing-system": {
+      "type": "local",
+      "command": ["npx", "-y", "@glg/mcp-ticketing-system"],
+      "enabled": false
+    }
+  }
+}
