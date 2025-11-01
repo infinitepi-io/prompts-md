@@ -1,0 +1,26 @@
+{
+  "cleanupPeriodDays": 7,
+  "env": {
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_NON_ESSENTIAL_MODEL_CALLS": 1
+  },
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Bash(git diff:*)",
+      "Bash(npm run test:*)",
+      "Read(~/.zshrc)"
+    ],
+    "deny": [
+      "Bash(curl:*)",
+      "Bash(git push:*)",
+      "Bash(git rebase:*)",
+      "Read(./.env)",
+      "Read(./.env.*)"
+    ],
+    "ask": [
+      "Bash(git commit:*)"
+    ]
+  },
+  "alwaysThinkingEnabled": false
+}
